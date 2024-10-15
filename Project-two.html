@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=>, initial-scale=1.0" />
+    <title>Painting</title>
+    <style>
+      body {
+        background: linear-gradient(
+          to right,
+          rgb(242, 112, 156),
+          rgb(255, 148, 114)
+        );
+      }
+      h1 {
+        text-align: center;
+        line-height: 50px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      h2 {
+        text-align: center;
+        line-height: 50px;
+        font-family: "Courier New", Courier, monospace;
+        color: grey;
+      }
+      img {
+        max-width: 100%;
+      }
+      p {
+        font-size: 18px;
+        line-height: 30px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      button {
+        margin: 60px auto;
+        display: block;
+        font-size: 20px;
+        border-radius: 20px;
+        padding: 15px;
+
+        border: 1px solid coral;
+        background: linear-gradient(
+          to right,
+          rgb(242, 112, 156),
+          rgb(255, 148, 114)
+        );
+        color: white;
+        transition: all 200ms ease-in;
+      }
+      button:hover {
+        color: rgb(242, 112, 156);
+        background: white;
+        cursor: pointer;
+      }
+
+      .container {
+        max-width: 600px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 0 auto;
+      }
+      footer {
+        text-align: center;
+        margin: 20px 0px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: black;
+      }
+      .footer-link {
+        color: black;
+      }
+      .theme-dark {
+        margin: 40px auto;
+        font-size: 15px;
+        background-color: darkslategrey;
+        border: 1px solid white;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        color: white;
+        padding: 8px;
+      }
+      .theme-dark:hover {
+        color: darkslategrey;
+        background-color: white;
+      }
+      .intro-pic {
+        border-radius: 10px;
+        transition: all 200ms ease-in;
+      }
+      .intro-pic:hover {
+        transform: scale(0.9);
+        filter: contrast(50%);
+      }
+      .grid {
+        display: grid;
+        margin: 20px auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+      }
+      .grid img {
+        border-radius: 10px;
+        width: 100%;
+        transition: all 200ms ease-in;
+        object-fit: cover;
+        aspect-ratio: 0.1/0.1;
+      }
+
+      .grid img:hover {
+        transform: scale(0.9);
+      }
+      .dark {
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(69, 86, 102) 0%,
+          rgb(34, 34, 34) 90%
+        );
+        color: white;
+      }
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .dark h2 {
+        color: white;
+      }
+      .dark a {
+        color: coral;
+      }
+      .dark footer {
+        color: white;
+      }
+      .dark button {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        border: none;
+        transition: all 200ms ease-in;
+      }
+      .dark button:hover {
+        color: white;
+        background: linear-gradient(
+          to right,
+          rgb(242, 112, 156),
+          rgb(255, 148, 114)
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-dark"><strong>Change Mode</strong></button>
+    <div class="container">
+      <h1>🎨 Painting is ...</h1>
+      <h2>my favorite hobby</h2>
+      <a href="https://www.youtube.com/watch?v=1G4jE4OyiEg" target="_blank">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/112/original/asass.jpg?1724708820"
+          alt=""
+          class="intro-pic"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/111/original/sdsdsd.jpg?1724708782"
+          alt=""
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/109/original/dsdsdsf.jpg?1724708746"
+          alt=""
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/141/108/original/sdsf.jpg?1724708703"
+          alt=""
+        />
+      </div>
+      <p>
+        Painting is a visual art form that involves applying paint, pigment, or
+        other mediums to a solid surface, or "matrix", to express ideas and
+        emotions. Artists use shapes, lines, colors, tones, and textures to
+        create sensations of movement, space, volume, and light on a flat
+        surface. Paintings can represent real or supernatural phenomena,
+        interpret a narrative, or be abstract.
+        <br />
+        <br />
+        📖
+        <a href="https://www.britannica.com/art/painting" target="_blank"
+          ><strong> Read more on Britannica</strong></a
+        >
+      </p>
+      <button class="workshop-button">
+        <strong>FREE WORKSHOPS AVAILABLE</strong>
+      </button>
+      <footer>
+        Coded by
+        <a
+          href="https://www.instagram.com/andreaemorinigo/"
+          target="_blank"
+          class="footer-link"
+          >Andrea Morinigo</a
+        >
+      </footer>
+    </div>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-dark");
+      themeButton.addEventListener("click", changeTheme);
+
+      function canApply() {
+        let age = prompt("How old are you?");
+        return age >= 18;
+      }
+
+      function applyNow() {
+        let skills = prompt("Have you ever painted before?");
+        let name = prompt("What is your first name?");
+
+        let email = prompt("What is your email address?");
+        if (canApply()) {
+          alert(
+            `Thanks, ${name}! We'll be in touch soon with more details. Feel free to contact us for any questions! `
+          );
+        } else {
+          alert(
+            `Sorry ${name}. You will need a parent or guardin to help you register... Go grab them ... I can wait...`
+          );
+        }
+      }
+
+      let workshopButton = document.querySelector(".workshop-button");
+      workshopButton.addEventListener("click", applyNow);
+    </script>
+  </body>
+</html>
